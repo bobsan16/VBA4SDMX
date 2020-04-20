@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mes:Structure xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:xml="http://www.w3.org/XML/1998/namespace" 
+    xmlns:mes="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" 
+    xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" 
+    xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xsi:schemaLocation="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message https://registry.sdmx.org/schemas/v2_1/SDMXMessage.xsd">
+    <mes:Header>
+        <mes:ID>IREF383017</mes:ID>
+        <mes:Test>false</mes:Test>
+        <mes:Prepared>2020-04-17T15:45:02Z</mes:Prepared>
+        <mes:Sender id="SDMX" />
+        <mes:Receiver id="not_supplied" />
+    </mes:Header>
+    <mes:Structures>
+        <str:Codelists>
+            <str:Codelist urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SDMX:CL_FREQ(2.0)" isExternalReference="false" agencyID="SDMX" id="CL_FREQ" isFinal="true" version="2.0">
+                <com:Name xml:lang="en">Frequency</com:Name>
+                <com:Description xml:lang="en">This code list provides a set of values indicating the "frequency" of the data (e.g. weekly, monthly, quarterly). The concept “frequency” may refer to various stages in the production process, e.g. data collection or data dissemination. For example, a time series could be disseminated at annual frequency but the underlying data are compiled monthly. The code list is applicable for all different uses of "frequency". This code list was formally adopted on 4 December 2013. More information about and supporting material for this code list and SDMX code lists in general (e.g. list of generic codes for expressing general concepts like "Total", "Unknown", etc.; syntaxes for the creation of further codes; general guidelines for the creation of SDMX code lists) can be found at this address: https://sdmx.org/?page_id=4345.</com:Description>
+                <str:Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_FREQ(2.0).A" id="A">
+                    <com:Name xml:lang="en">Annual</com:Name>
+                    <com:Description xml:lang="en">To be used for data collected or disseminated every year.</com:Description>
+                </str:Code>
+                <str:Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_FREQ(2.0).S" id="S">
+                    <com:Name xml:lang="en">Half-yearly, semester</com:Name>
+                    <com:Description xml:lang="en">To be used for data collected or disseminated every semester.</com:Description>
+                </str:Code>
+                <str:Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_FREQ(2.0).Q" id="Q">
+                    <com:Name xml:lang="en">Quarterly</com:Name>
+                    <com:Description xml:lang="en">To be used for data collected or disseminated every quarter.</com:Description>
+                </str:Code>
+                <str:Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_FREQ(2.0).M" id="M">
+                    <com:Name xml:lang="en">Monthly</com:Name>
+                    <com:Description xml:lang="en">To be used for data collected or disseminated every month.</com:Description>
+                </str:Code>
+                <str:Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_FREQ(2.0).W" id="W">
+                    <com:Name xml:lang="en">Weekly</com:Name>
+                    <com:Description xml:lang="en">To be used for data collected or disseminated every week.</com:Description>
+                </str:Code>
+                <str:Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_FREQ(2.0).D" id="D">
+                    <com:Name xml:lang="en">Daily</com:Name>
+                    <com:Description xml:lang="en">To be used for data collected or disseminated every day.</com:Description>
+                </str:Code>
+                <str:Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_FREQ(2.0).H" id="H">
+                    <com:Name xml:lang="en">Hourly</com:Name>
+                    <com:Description xml:lang="en">To be used for data collected or disseminated every hour.</com:Description>
+                </str:Code>
+                <str:Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_FREQ(2.0).B" id="B">
+                    <com:Name xml:lang="en">Daily – businessweek</com:Name>
+                    <com:Description xml:lang="en">Similar to "daily", however there are no observations for Saturdays and Sundays (so, neither "missing values" nor "numeric values" should be provided for Saturday and Sunday). This treatment  ("business") is one way to deal with such cases, but it is not the only option. Such a time series could alternatively be considered daily ("D"), thus, with missing values in the weekend.</com:Description>
+                </str:Code>
+                <str:Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_FREQ(2.0).N" id="N">
+                    <com:Name xml:lang="en">Minutely</com:Name>
+                    <com:Description xml:lang="en">While N denotes "minutely", usually, there may be no observations every minute (for several series the frequency is usually "irregular" within a day/days). And though observations may be sparse (not collected or disseminated every minute), missing values do not need to be given for the minutes when no observations exist: in any case the time stamp determines when an observation is observed.</com:Description>
+                </str:Code>
+            </str:Codelist>
+        </str:Codelists>
+    </mes:Structures>
+</mes:Structure>
