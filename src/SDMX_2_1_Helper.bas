@@ -11,6 +11,11 @@ Attribute VB_Name = "sdmx_2_1_Helper"
 
 'SDMX_2_1_SECTION_03A_PART_II_COMMON:
 
+'ObsDimensionsCodeType
+Public Enum com_ObsDimensionsCodeType
+    AllDimensions
+    TIME_PERIOD
+End Enum
 
 'TimeDataType
 Public Enum com_TimeData
@@ -167,14 +172,13 @@ Public Type com_Structure
     structureID As String
     schemaURL As String
     namespace As String
-    dimensionAtObservation As sdmx_2_1_Helper.com_ObservationDimension
+    dimensionAtObservation As com_ObsDimensionsCodeType 'fixed: TIME_PERIOD
 '    explicitMeasures As Boolean 'PayloadStructureType
     serviceURL As String
     structureURL As String
 '    ProvisionAgrement 'PayloadStructureType
 '    StructureUsage 'PayloadStructureType
-'    Structure 'PayloadStructureType
-    agencyID As String
+    Structure As sdmx_2_1_Helper.com_DataStructureReference
 End Type
 
 
@@ -499,6 +503,20 @@ End Type
 
 ' SDMX_2_1_SECTION_03A_PART_I_MESSAGE:
 
+'Global Elements
+Public Enum SDMX_2_1_globalElements
+    Unknown = 0
+    Structure 'StructureType
+    GenericData 'GenericDataType
+    GenericTimeSeriesData 'GenericTimeSeriesDataType
+    StructureSpecificData 'StructureSpecificDataType
+    StructureSpecificTimeSeriesData 'StructureSpecificTimeSeriesDataType
+    GenericMetadata 'GenericMetadataType
+    StructureSpecificMetadata 'StructureSpecificMetadataType
+    RegistryInterface 'RegistryInterfaceType
+End Enum
+
+
 ' BaseHeaderType
 ' StructureSpecificTimeSeriesDataHeaderType
 Public Type mes_Header
@@ -533,6 +551,32 @@ End Type
 'StructureType
 Public Type mes_MessageStructures
     Header As sdmx_2_1_Helper.mes_Header
-'    Structures As 'str:StructuresType
+    Structures As sdmx_2_1_Helper.str_Structure
 '    Footer
 End Type
+
+Public Const NS_MES_URI = "http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message"
+Public Const NS_COM_URI = "http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common"
+Public Const NS_DAT_URI = "http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic"
+Public Const NS_DSD_URI = "http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/structurespecific"
+Public Const NS_FTR_URI = "http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message/footer"
+Public Const NS_REP_URI = "http://www.sdmx.org/resources/sdmxml/schemas/v2_1/metadata/generic"
+Public Const NS_MSD_URI = "http://www.sdmx.org/resources/sdmxml/schemas/v2_1/metadata/structurespecific"
+Public Const NS_QRY_URI = "http://www.sdmx.org/resources/sdmxml/schemas/v2_1/query"
+Public Const NS_REF_URI = "http://www.sdmx.org/resources/sdmxml/schemas/v2_1/registry"
+Public Const NS_STR_URI = "http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure"
+Public Const NS_XS_URI = "http://www.w3.org/2001/XMLSchema"
+
+Public Const NS_MES_PREFIX = "mes"
+Public Const NS_COM_PREFIX = "com"
+Public Const NS_DAT_PREFIX = "dat"
+Public Const NS_DSD_PREFIX = "dsd"
+Public Const NS_FTR_PREFIX = "ftr"
+Public Const NS_REP_PREFIX = "rep"
+Public Const NS_MSD_PREFIX = "msd"
+Public Const NS_QRY_PREFIX = "qry"
+Public Const NS_REF_PREFIX = "fer"
+Public Const NS_STR_PREFIX = "str"
+Public Const NS_XS_PREFIX = "xs"
+
+
