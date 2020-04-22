@@ -1,0 +1,22 @@
+<message:Header xmlns:message="http://www.sdmx.org/resources/sdmxml/schNemas/v2_1/message" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+        <message:ID>10004</message:ID>
+        <message:Test>true</message:Test>
+        <message:Prepared>2001-12-17T09:30:47Z</message:Prepared>
+        <message:Sender id="DE2"/>
+        <common:Name xml:lang="A">SHSS ISIN reporting</common:Name>
+        <message:Structure structureID="ESCBSHS_SHS_HEADER" namespace="ESCBSHS_SHS_HEADER" dimensionAtObservation="AllDimensions">
+            <common:Structure>
+                <Ref agencyID="ESCBSHS" id="ESCBSHS_SHS_HEADER" version="1.0"/>
+            </common:Structure>
+        </message:Structure>
+        <message:Structure structureID="ESCBSHS_SHS_ISIN_SECURITY" namespace="ESCBSHS_SHS_ISIN_SECURITY" dimensionAtObservation="AllDimensions">
+            <common:Structure>
+                <Ref agencyID="ESCBSHS" id="ESCBSHS_SHS_ISIN_SECURITY" version="1.0"/>
+            </common:Structure>
+        </message:Structure>
+        <message:Structure structureID="ESCBSHS_SHS_ISIN_HOLDING" namespace="ESCBSHS_ISIN_SHS_HOLDING" dimensionAtObservation="AllDimensions">
+            <common:Structure>
+                <Ref agencyID="ESCBSHS" id="ESCBSHS_SHS_HOLDING" version="1.0"/>
+            </common:Structure>
+        </message:Structure>
+    </message:Header>
