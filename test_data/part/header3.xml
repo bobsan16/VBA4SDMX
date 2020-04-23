@@ -1,4 +1,4 @@
-<message:Header xmlns:message="http://www.sdmx.org/resources/sdmxml/schNemas/v2_1/message" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+<message:Header xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
         <message:ID>10004</message:ID>
         <message:Test>true</message:Test>
         <message:Prepared>2001-12-17T09:30:47Z</message:Prepared>
